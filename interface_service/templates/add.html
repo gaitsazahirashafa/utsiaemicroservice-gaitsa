@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="/static/styles/add.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add Task</h1>
+        <form action="/add_task" method="POST">
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        {% if message %}
+        <p class="message">{{ message }}</p>
+        {% endif %}
+        <a href="/" class="back-button">Back to Task List</a>
+    </div>
+</body>
+
+</html>

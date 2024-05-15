@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat List Harian</title>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <a href="/add" target="_blank">add new task</a>
+        <h1>To do List</h1>
+        <ul id="tasks"></ul>
+    </div>
+</body>
+
+</html>

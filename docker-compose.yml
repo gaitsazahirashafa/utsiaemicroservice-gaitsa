@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  inventory_service:
+    build: ./inventory_service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+  interface_service:
+    build: ./interface_service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - redis
