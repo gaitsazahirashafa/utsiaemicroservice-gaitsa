@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__)
 redis_client = redis.StrictRedis(host='redis', port=6379, db=0)
-# ganti dengan ip kamu
+
 url = 'http://192.168.0.7:5000' 
 
 tasks = []
